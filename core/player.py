@@ -1,10 +1,12 @@
 from random import *
 
 class Player:
-    def __init__(self, name):
-        professions = ["doctor", "fighter"]
+    professions = ["doctor", "fighter"]
+    profession = choice(professions)
+
+    def __init__(self, name, profession=profession, ):
         self.name = name
-        self.profession = choice(professions)
+        self.profession = profession
         self.speed = randint(5, 10)
         self.armor_rating = randint(5, 15)
         self.hp = 50

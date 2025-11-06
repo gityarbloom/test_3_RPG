@@ -9,7 +9,7 @@ class Game:
         return self.show_menu()
 
     def show_menu(self):
-        choice = input("\nGAME MENU:\n \nENTER--> \n0 to running away \nor 1 to fight\n")
+        choice = int(input("\nGAME MENU:\n \nENTER--> \n0 to running away \nor 1 to fight\n"))
         return choice
 
     def create_player(self):
@@ -26,7 +26,7 @@ class Game:
         player_rolling = self.roll_dice(6) + player.speed
         monster_rolling = self.roll_dice(6) + monster.speed
         counter = 1
-        while player.hp and monster.hp:
+        while player.hp > 0 and monster.hp > 0:
             if player_rolling >= monster_rolling and counter % 2:
                 player.attack(monster)
                 counter += 1
