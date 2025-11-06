@@ -6,4 +6,5 @@ if __name__ == "__main__":
     if play_now:
         player = new_game.create_player()
         monster = new_game.choose_random_monster()
-        print(f"{new_game.battle(player, monster)}")
+        end_game = new_game.battle(player, monster)
+        print(f"{end_game} WONS")

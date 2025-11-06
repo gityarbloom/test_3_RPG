@@ -37,7 +37,7 @@ class Game:
             winner = player
         else:
             winner = monster 
-        return winner
+        return winner.name
 
     def roll_dice(self, max:int):
         return randint(1, max)
